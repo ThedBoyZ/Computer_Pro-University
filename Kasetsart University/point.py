@@ -1,0 +1,23 @@
+import math
+sq=input('Enter rectangle: ')
+xs1,ys1,xs2,ys2=sq.split(',')
+xs1=float(xs1)
+ys1=float(ys1)
+xs2=float(xs2)
+ys2=float(ys2)
+areaS=abs(ys2-ys1)*abs(xs2-xs1)
+areaS=round(areaS,2)
+areaS = int(areaS)
+circle=input('Enter circle: ')
+xc,yc,r=circle.split(',')
+xc=float(xc)
+yc=float(yc)
+r=float(r)
+areaC=math.pi*(r**2)
+areaC=round(areaC,2)
+if ((xs1-xc)**2+(ys1-yc)**2<r**2) and ((xs2-xc)**2+(ys1-yc)**2<r**2):
+    print('The rectangle is in the circle.')
+else:
+    print('The rectangle is not in the circle.')
+print('The area of rectangle is ',areaS,'.',sep='')
+print('The area of circle is ',areaC,'.',sep='')
